@@ -34,7 +34,7 @@ function ProductCardComponent({ product }) {
             </div>
           </div>
           <div className="grid place-content-center h-1/5 bottom-0">
-            <button class="btn-add-cart w-48"> Add to Cart </button>
+            <button className="btn-add-cart w-48"> Add to Cart </button>
           </div>
         </div>
         :

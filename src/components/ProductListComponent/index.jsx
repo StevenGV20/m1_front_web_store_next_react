@@ -1,5 +1,7 @@
 import React from 'react'
 import ProductCardComponent from '../ProductCardComponent'
+import { useRouter } from 'next/navigation';
+
 
 function ProductListComponent() {
   const array = [
@@ -9,6 +11,11 @@ function ProductListComponent() {
     {id:4,name:"product4",image: "/producto1.png",price:5.00},
     {id:5,name:"product5",image: "/producto1.png",price:155.00},
   ];
+
+  /* const router = useRouter();
+  const category_id = router.query.category_id; */
+
+  //console.log("category_id",category_id);
   return (
     <div className='m-8'>
         <h1 className='text-4xl font-bold'>Category 1</h1>
@@ -17,7 +24,7 @@ function ProductListComponent() {
             
             array.map(item => {
               return(
-                <ProductCardComponent product={item}/>
+                <ProductCardComponent key={item.id} product={item}/>
               );
             })
           }
