@@ -19,7 +19,7 @@ function ProductCardComponent({ product }) {
     >
       {
         onMouse ? 
-        <>
+        <div className="h-4/5">
           <div className="h-3/4 text-center grid justify-items-center content-center rounded-2xl">
             <img
               src={product.image}
@@ -33,9 +33,12 @@ function ProductCardComponent({ product }) {
               {moneda} {product.price}
             </div>
           </div>
-        </>
+          <div className="grid place-content-center h-1/5 bottom-0">
+            <button class="btn-add-cart w-48"> Add to Cart </button>
+          </div>
+        </div>
         :
-        <>
+        <div>
           <div className="h-3/4 text-center grid justify-items-center content-center rounded-2xl">
             <img
               src={product.image}
@@ -49,7 +52,7 @@ function ProductCardComponent({ product }) {
               {moneda} {product.price}
             </div>
           </div>
-        </>
+        </div>
       }
     </div>
   );
