@@ -1,21 +1,23 @@
+'use client';
 import React, { useEffect, useState }  from 'react';
-import FooterComponent from "@/components/FooterComponent";
-import NavBarComponent from "@/components/NavBarComponent";
-import axios, { Axios } from "axios";
-import useSWR from 'swr';
+import axios from "axios";
+import { API_URI } from '../util/constantes';
+import NavBarComponent from '../components/NavBarComponent';
+import FooterComponent from '../components/FooterComponent';
 
 function Layout({children}) {  
 
   const [categories, setCategories] = useState([]);
-  const url = "http://ip172-18-0-4-cnuv1oi91nsg00f9tnvg-3001.direct.labs.play-with-docker.com";
+
   
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`${url}/categories`);
-        console.log(response.data);
-        localStorage.setItem("CATEGORIES",JSON.stringify(response.data));
-        setCategories(response.data);
+        //const response = await axios.get(`${API_URI}/categories`);
+        //console.log(response.data);
+        //localStorage.setItem("CATEGORIES",JSON.stringify(response.data));
+        const dataCategories = await JSON.parse(localStorage.getItem("CATEGORIES"))
+        setCategories(dataCategories);
       } catch (error) {
         console.log(error);
       }

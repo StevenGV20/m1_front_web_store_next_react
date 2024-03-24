@@ -28,7 +28,7 @@ function ProductCardComponent({ product }) {
             />
           </div>
           <div className="flex flex-row px-4 py-2 text-lg">
-            <figcaption className="w-4/5">{product.name}</figcaption>
+            <figcaption className="w-4/5">{product.productName}</figcaption>
             <div className="w-1/5 text-right">
               {moneda} {product.price}
             </div>
@@ -42,12 +42,12 @@ function ProductCardComponent({ product }) {
           <div className="h-3/4 text-center grid justify-items-center content-center rounded-2xl">
             <img
               src={product.image}
-              alt={product.name}
+              alt={product.productName}
               className="rounded-lg mt-8 h-auto"
             />
           </div>
           <div className="flex flex-row px-4 py-2 text-lg">
-            <figcaption className="w-4/5">{product.name}</figcaption>
+            <figcaption className="w-4/5">{product.productName}</figcaption>
             <div className="w-1/5 text-right">
               {moneda} {product.price}
             </div>

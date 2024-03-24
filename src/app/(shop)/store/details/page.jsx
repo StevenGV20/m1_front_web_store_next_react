@@ -3,9 +3,7 @@ import React from 'react'
 
 function ProductDetailPage() {
   return (
-    <MainShopPages>
-      <div>ProductDetailPage</div>
-    </MainShopPages>
+    <div>ProductDetailPage</div>
   )
 }
 
